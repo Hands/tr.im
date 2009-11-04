@@ -33,8 +33,8 @@ class RedirectController < ApplicationController
       cvurls = Iconv.iconv('ascii//translit', 'utf-8', urls).to_s
       cvurls.gsub(/\W/, '')
 
-      if UrlShortening.exists?({ :shortener_id => UrlShortener::ID_TRIM, :surl => cvurls })
-        @shortening = UrlShortening.first(:conditions => { :shortener_id => UrlShortener::ID_TRIM, :surl => cvurls },
+      if ::UrlShortening.exists?({ :shortener_id => UrlShortener::ID_TRIM, :surl => cvurls })
+        @shortening = ::UrlShortening.first(:conditions => { :shortener_id => UrlShortener::ID_TRIM, :surl => cvurls },
                                           :include => [ :trim_url, :url_destination ])
         @trim_url = @shortening.trim_url
         do_redirection
