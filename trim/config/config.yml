@@ -22,10 +22,10 @@
 ##
 
 website_id: 1
-website_url: http://tr.im/
-website_domain: tr.im
-website_blog_url: http://blog.tr.im/
-website_blog_feed: feed://blog.tr.im/rss
+website_url: http://hnd.me/
+website_domain: hnd.me
+website_blog_url: http://m.hands.com.br/
+website_blog_feed: feed://hands.com.br/rss
 
 href_width_account: 52
 href_width_homepage: 60
