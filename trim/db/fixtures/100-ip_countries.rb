@@ -16,6 +16,6 @@
 
 ActiveRecord::Base.connection.execute("DELETE FROM ip_countries")
 
-sql  = "LOAD DATA INFILE '#{File.join(RAILS_ROOT, 'db', 'ips', 'IPCountry.csv')}' "
+sql  = "LOAD DATA LOCAL INFILE '#{File.join(RAILS_ROOT, 'db', 'ips', 'IPCountry.csv')}' "
 sql << "INTO TABLE ip_countries FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r\n';"
 ActiveRecord::Base.connection.execute(sql)
